@@ -66,10 +66,10 @@
   user-select: none;
 }
 
-.keyword { color: #C084FC; } /* Keep syntax highlighting for now or define syntax vars */
-.type { color: #FEF08A; }
-.prop { color: #93C5FD; }
-.string { color: #86EFAC; }
+.keyword { color: var(--syntax-keyword); }
+.type { color: var(--syntax-type); }
+.prop { color: var(--syntax-prop); }
+.string { color: var(--syntax-string); }
 .highlightText { color: var(--accent); }
 
 .cursor {

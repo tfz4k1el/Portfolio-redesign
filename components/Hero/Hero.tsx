@@ -35,7 +35,12 @@ const MountainWireframe = () => (
   </svg>
 );
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  traceryEnabled: boolean;
+  toggleTracery: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ traceryEnabled, toggleTracery }) => {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.overlay} />
@@ -82,7 +87,12 @@ export const Hero: React.FC = () => {
           transition={{ delay: 1, duration: 1 }}
           className={styles.scrollIndicator}
         >
-          SCROLL_VELOCITY: UNLOCKED
+          <button 
+            onClick={toggleTracery}
+            className={styles.traceryToggle}
+          >
+            TRACERY: [{traceryEnabled ? 'ON' : 'OFF'}]
+          </button>
         </motion.div>
       </Section>
     </div>

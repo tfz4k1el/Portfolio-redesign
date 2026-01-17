@@ -1,7 +1,11 @@
 import React, { useRef, useEffect } from "react";
 import styles from "./TraceryOverlay.module.css";
 
-const TraceryOverlay: React.FC = () => {
+interface TraceryOverlayProps {
+    enabled: boolean;
+}
+
+const TraceryOverlay: React.FC<TraceryOverlayProps> = ({ enabled = true }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -99,13 +103,13 @@ const TraceryOverlay: React.FC = () => {
       ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
       
       // Common styles
-      // Access theme variable --accent for the drawing color
-      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#FFFFFF';
+      // Access theme variable --overlay-color for the drawing color
+      const overlayColor = getComputedStyle(document.documentElement).getPropertyValue('--overlay-color').trim() || '#FFFFFF';
       
-      ctx.strokeStyle = accentColor; 
+      ctx.strokeStyle = overlayColor; 
       ctx.lineWidth = 1;
       ctx.setLineDash([]); // Solid lines for camera focus
-      ctx.fillStyle = accentColor;
+      ctx.fillStyle = overlayColor;
       ctx.font = '500 10px monospace';
 
       // Iterate ALL targets every frame

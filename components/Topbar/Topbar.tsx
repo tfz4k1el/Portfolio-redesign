@@ -8,6 +8,14 @@ interface TopbarProps {
   onPaletteChange: (newPalette: string) => void;
 }
 
+const THEMES = [
+  { id: 'catppuccin', color: '#cba6f7', label: 'Catppuccin' },
+  { id: 'rosepine', color: '#ebbcba', label: 'Rose Pine' },
+  { id: 'nord', color: '#88C0D0', label: 'Nord' },
+  { id: 'gruvbox', color: '#fe8019', label: 'Gruvbox' },
+  { id: 'kanagawa', color: '#7E9CD8', label: 'Kanagawa' },
+];
+
 export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme, palette, onPaletteChange }) => {
   return (
     <nav className={styles.topbar}>
@@ -16,17 +24,19 @@ export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme, palette, onP
       </a>
       
       <div className={styles.controls}>
-          <select 
-            value={palette} 
-            onChange={(e) => onPaletteChange(e.target.value)} 
-            className={styles.themeSelector}
-          >
-            <option value="rosepine">Rose Pine</option>
-            <option value="nord">Nord</option>
-            <option value="catppuccin">Catppuccin</option>
-            <option value="gruvbox">Gruvbox</option>
-            <option value="kanagawa">Kanagawa</option>
-          </select>
+          <div className={styles.themeList}>
+            {THEMES.map((t) => (
+              <button
+                key={t.id}
+                className={styles.themeIconBtn}
+                style={{ backgroundColor: t.color }}
+                title={t.label}
+                onClick={() => onPaletteChange(t.id)}
+                data-active={palette === t.id}
+                aria-label={`Select ${t.label} Theme`}
+              />
+            ))}
+          </div>
 
           <button onClick={toggleTheme} className={styles.themeBtn} aria-label="Toggle Light/Dark Mode">
             {theme === 'light' ? (

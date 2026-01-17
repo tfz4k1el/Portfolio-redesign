@@ -7,6 +7,7 @@
   --accent: #cba6f7; /* Mauve */
   --border-color: #45475a; /* Surface1 */
   --bg-grid: #585b70; /* Surface2 */
+  --overlay-color: #FFFFFF;
 }
 
 /* Catppuccin Latte (Light) */
@@ -18,4 +19,5 @@
   --accent: #8839ef; /* Mauve */
   --border-color: #ccd0da;
   --bg-grid: #bcc0cc;
+  --overlay-color: #000000;
 }

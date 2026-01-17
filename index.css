@@ -8,6 +8,11 @@
   --accent: #80DEEA;
   --border-color: #333333;
   --bg-grid: #333333;
+  --overlay-color: #FFFFFF;
+  --syntax-keyword: #C084FC;
+  --syntax-type: #FEF08A;
+  --syntax-prop: #93C5FD;
+  --syntax-string: #86EFAC;
   
   /* Additional functional colors that might be needed */
   --success: #80DEEA; /* Online status */

@@ -1,5 +1,5 @@
 .section {
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--border-color);
 }
 
 .grid {
@@ -31,17 +31,17 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
-  color: #F5F5F5;
+  color: var(--text-primary);
 }
 
 .headingNumber {
-  color: #80DEEA;
+  color: var(--accent);
   font-size: 1.25rem; /* text-xl */
   font-family: monospace;
 }
 
 .description {
-  color: #9CA3AF; /* gray-400 */
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.625;
 }
@@ -49,8 +49,8 @@
 .status {
   font-family: monospace;
   font-size: 0.75rem; /* text-xs */
-  color: #80DEEA;
-  border: 1px solid #80DEEA;
+  color: var(--accent);
+  border: 1px solid var(--accent);
   display: inline-block;
   padding: 0.25rem 0.75rem;
 }
@@ -80,8 +80,8 @@
 
 /* Metric Card Styles */
 .metricCard {
-  border: 1px solid #333;
-  background-color: #121212;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
@@ -99,7 +99,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background-color: #80DEEA;
+  background-color: var(--accent);
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
@@ -115,7 +115,7 @@
 .metricLabel {
   font-family: monospace;
   font-size: 0.75rem;
-  color: #6B7280;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
@@ -124,14 +124,14 @@
 .metricValue {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #F5F5F5;
+  color: var(--text-primary);
   font-family: monospace;
   letter-spacing: -0.05em;
 }
 
 .metricUnit {
   font-size: 1rem;
-  color: #80DEEA;
+  color: var(--accent);
   margin-left: 0.25rem;
 }
 
@@ -139,13 +139,14 @@
   margin-top: 0.5rem;
   font-size: 0.75rem;
   font-family: monospace;
-  color: #4B5563;
+  color: var(--text-secondary);
+  opacity: 0.8;
 }
 
 .chartContainer {
   height: 12rem;
-  border: 1px solid #333;
-  background-color: #121212;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
   padding: 1rem;
   position: relative;
 }
@@ -157,5 +158,5 @@
   z-index: 10;
   font-family: monospace;
   font-size: 0.75rem;
-  color: #6B7280;
+  color: var(--text-secondary);
 }

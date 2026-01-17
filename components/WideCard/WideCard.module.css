@@ -18,8 +18,36 @@
   }
 }
   
-.card:hover {
+/* .card:hover {
   border-color: var(--accent);
+} Removed simple border hover */
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  background: 
+    /* Top Left */
+    linear-gradient(var(--accent), var(--accent)) 0 0 / 20px 1px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 0 0 / 1px 20px no-repeat,
+    /* Top Right */
+    linear-gradient(var(--accent), var(--accent)) 100% 0 / 20px 1px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 100% 0 / 1px 20px no-repeat,
+    /* Bottom Right */
+    linear-gradient(var(--accent), var(--accent)) 100% 100% / 20px 1px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 100% 100% / 1px 20px no-repeat,
+    /* Bottom Left */
+    linear-gradient(var(--accent), var(--accent)) 0 100% / 20px 1px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 0 100% / 1px 20px no-repeat;
+}
+
+.card:hover::after {
+  opacity: 1;
 }
 
 .backgroundGrid {
@@ -135,7 +163,7 @@
   top: 0;
   transform: translateY(0);
   border: 1px solid var(--border-color);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   transition-property: top, transform;
   transition-duration: var(--mobile-duration, 2.5s);

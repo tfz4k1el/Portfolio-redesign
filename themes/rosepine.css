@@ -7,6 +7,11 @@
   --accent: #ebbcba; /* Rose */
   --border-color: #403d52;
   --bg-grid: #26233a;
+  --overlay-color: #FFFFFF;
+  --syntax-keyword: #C084FC;
+  --syntax-type: #FEF08A;
+  --syntax-prop: #93C5FD;
+  --syntax-string: #86EFAC;
 }
 
 /* Rosé Pine Dawn (Light) */
@@ -18,4 +23,9 @@
   --accent: #d7827e; /* Rose */
   --border-color: #dfdad9;
   --bg-grid: #dfdad9;
+  --overlay-color: #000000;
+  --syntax-keyword: #7c3aed;
+  --syntax-type: #ca8a04;
+  --syntax-prop: #2563eb;
+  --syntax-string: #16a34a;
 }

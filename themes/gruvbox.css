@@ -7,6 +7,7 @@
   --accent: #fe8019; /* Orange */
   --border-color: #504945; /* Bg2 */
   --bg-grid: #665c54; /* Bg3 */
+  --overlay-color: #FFFFFF;
 }
 
 /* Gruvbox Light (Hard) */
@@ -18,4 +19,5 @@
   --accent: #d65d0e; /* Orange */
   --border-color: #d5c4a1; /* Bg2 */
   --bg-grid: #bdae93; /* Bg3 */
+  --overlay-color: #000000;
 }

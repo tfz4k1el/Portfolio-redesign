@@ -6,7 +6,7 @@ import styles from './WorkStack.module.css';
 
 export const WorkStack: React.FC = () => {
   return (
-    <Section id="work" className="bg-[#0F0F0F]">
+    <Section id="work">
        <div className={styles.sectionHeader}>
             <h2 className={styles.heading}>
                 <span className={styles.headingNumber}>02.</span>

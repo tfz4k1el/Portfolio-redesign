@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
   // Theme State: 'light' or 'default' (dark)
   const [mode, setMode] = useState('default');
-  const [palette, setPalette] = useState('rosepine');
+  const [palette, setPalette] = useState('catppuccin');
 
   useEffect(() => {
     // Construct theme string: e.g. "rosepine" or "rosepine-light"
@@ -38,6 +38,9 @@ const App: React.FC = () => {
   const toggleTheme = () => {
     setMode(prev => prev === 'default' ? 'light' : 'default');
   };
+
+  // Tracery State
+  const [traceryEnabled, setTraceryEnabled] = useState(true);
 
   return (
     <div className={styles.appContainer}>
@@ -54,14 +57,14 @@ const App: React.FC = () => {
         style={{ scaleX }}
       />
       
-      <TraceryOverlay />
+      {traceryEnabled && <TraceryOverlay enabled={true} />}
 
       {/* Grid Overlay for Texture */}
       <div className={styles.gridOverlay} />
 
       {/* Main Content */}
       <main className={styles.mainContent}>
-        <Hero />
+        <Hero traceryEnabled={traceryEnabled} toggleTracery={() => setTraceryEnabled(!traceryEnabled)} />
         <Bio />
         <WorkStack />
         <TheLab />

@@ -87,15 +87,15 @@ export const TheLab: React.FC = () => {
                     <AreaChart data={chartData}>
                         <defs>
                             <linearGradient id="colorVal" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#80DEEA" stopOpacity={0.2}/>
-                                <stop offset="95%" stopColor="#80DEEA" stopOpacity={0}/>
+                                <stop offset="5%" stopColor="var(--accent)" stopOpacity={0.2}/>
+                                <stop offset="95%" stopColor="var(--accent)" stopOpacity={0}/>
                             </linearGradient>
                         </defs>
                         <YAxis hide domain={[0, 100]} />
                         <Area 
                             type="monotone" 
                             dataKey="value" 
-                            stroke="#80DEEA" 
+                            stroke="var(--accent)" 
                             strokeWidth={1}
                             fillOpacity={1} 
                             fill="url(#colorVal)" 
