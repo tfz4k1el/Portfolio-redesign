@@ -1,0 +1,111 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.terminal {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.terminalHeader {
+  background-color: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--border-color);
+}
+
+.terminalMeta {
+  margin-left: auto;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.terminalContent {
+  padding: 1.5rem;
+  font-family: monospace;
+  font-size: 0.875rem;
+  line-height: 2;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+  .terminalContent {
+    font-size: 1rem;
+  }
+}
+
+.lineNum {
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+  user-select: none;
+}
+
+.keyword { color: #C084FC; } /* Keep syntax highlighting for now or define syntax vars */
+.type { color: #FEF08A; }
+.prop { color: #93C5FD; }
+.string { color: #86EFAC; }
+.highlightText { color: var(--accent); }
+
+.cursor {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 0.625rem;
+  height: 1.25rem;
+  background-color: var(--accent);
+}
+
+.textSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-primary);
+}
+
+.headingNumber {
+  color: var(--accent);
+  font-size: 1.25rem; /* text-xl */
+  font-family: monospace;
+}
+
+.paragraph {
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.625;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}

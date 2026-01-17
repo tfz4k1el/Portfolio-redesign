@@ -1,0 +1,87 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  /* Using mix-blend-mode difference allows text to be visible against any background 
+     but requires the text color to be light or essentially inverted. 
+     If we want theme consistency, difference mode might fight with specific color themes.
+     However, keeping difference for "technical" feel as requested initially is fine, 
+     but color should be variable-aware.
+  */
+  mix-blend-mode: difference;
+  color: var(--accent); /* Use accent so it pops */
+}
+
+@media (min-width: 768px) {
+  .topbar {
+    padding: 0 3rem;
+  }
+}
+
+.contactBtn {
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.contactBtn:hover {
+  opacity: 0.7;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.themeSelector {
+  background: var(--bg-primary); /* Fallback */
+  color: inherit;
+  border: 1px solid currentColor;
+  padding: 0.25rem 0.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  appearance: none; /* Remove default arrow */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.themeSelector:hover {
+  opacity: 0.8;
+}
+
+.themeSelector option {
+  background-color: #0F0F0F;
+  color: #F5F5F5;
+}
+
+.themeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}

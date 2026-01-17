@@ -1,0 +1,21 @@
+/* Rosé Pine (Dark) */
+[data-theme="rosepine"] {
+  --bg-primary: #191724;
+  --bg-secondary: #1f1d2e;
+  --text-primary: #e0def4;
+  --text-secondary: #908caa;
+  --accent: #ebbcba; /* Rose */
+  --border-color: #403d52;
+  --bg-grid: #26233a;
+}
+
+/* Rosé Pine Dawn (Light) */
+[data-theme="rosepine-light"] {
+  --bg-primary: #faf4ed;
+  --bg-secondary: #fffaf3;
+  --text-primary: #575279;
+  --text-secondary: #797593;
+  --accent: #d7827e; /* Rose */
+  --border-color: #dfdad9;
+  --bg-grid: #dfdad9;
+}

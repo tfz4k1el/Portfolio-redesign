@@ -1,0 +1,141 @@
+.heroContainer {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0F0F0F;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(15, 15, 15, 0) 0%, rgba(15, 15, 15, 1) 100%);
+  z-index: 10;
+}
+
+.wireframe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contentGrid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.titleColumn {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .titleColumn {
+    grid-column: span 8;
+  }
+}
+
+.title {
+  font-size: 3.75rem; /* text-6xl */
+  font-weight: 700;
+  letter-spacing: -0.05em; /* tracking-tighter */
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary); /* Was #F5F5F5 */
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 8rem; /* text-9xl approx */
+  }
+}
+
+.subtitle {
+  display: block;
+  color: var(--accent); /* Was #80DEEA */
+  font-size: 1.5rem; /* text-2xl */
+  font-family: monospace;
+  margin-top: 0.5rem;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 2.25rem; /* text-4xl */
+  }
+}
+
+.statusColumn {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .statusColumn {
+    grid-column: span 4;
+  }
+}
+
+.statusBox {
+  border-left: 1px solid #80DEEA;
+  padding-left: 1.5rem;
+}
+
+.statusLine {
+  font-family: monospace;
+  font-size: 0.875rem; /* text-sm */
+  color: #9CA3AF;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .statusLine {
+    font-size: 1rem;
+  }
+}
+
+.statusOnline {
+  color: #80DEEA;
+}
+
+.description {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 1.25rem; /* text-xl */
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 1.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+@media (min-width: 768px) {
+  .scrollIndicator {
+    left: 3rem;
+  }
+}

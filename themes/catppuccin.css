@@ -1,0 +1,21 @@
+/* Catppuccin Mocha (Dark) */
+[data-theme="catppuccin"] {
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #313244; /* Surface0 */
+  --text-primary: #cdd6f4; /* Text */
+  --text-secondary: #a6adc8; /* Subtext0 */
+  --accent: #cba6f7; /* Mauve */
+  --border-color: #45475a; /* Surface1 */
+  --bg-grid: #585b70; /* Surface2 */
+}
+
+/* Catppuccin Latte (Light) */
+[data-theme="catppuccin-light"] {
+  --bg-primary: #eff1f5;
+  --bg-secondary: #e6e9ef; /* Surface0? Actually Base is eff1f5, Mantle e6e9ef */
+  --text-primary: #4c4f69;
+  --text-secondary: #6c6f85;
+  --accent: #8839ef; /* Mauve */
+  --border-color: #ccd0da;
+  --bg-grid: #bcc0cc;
+}

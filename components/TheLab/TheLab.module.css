@@ -1,0 +1,161 @@
+.section {
+  border-top: 1px solid #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.leftInfo {
+  grid-column: span 12;
+}
+
+@media (min-width: 1024px) {
+  .leftInfo {
+    grid-column: span 4;
+  }
+}
+
+.heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: #F5F5F5;
+}
+
+.headingNumber {
+  color: #80DEEA;
+  font-size: 1.25rem; /* text-xl */
+  font-family: monospace;
+}
+
+.description {
+  color: #9CA3AF; /* gray-400 */
+  margin-bottom: 2rem;
+  line-height: 1.625;
+}
+
+.status {
+  font-family: monospace;
+  font-size: 0.75rem; /* text-xs */
+  color: #80DEEA;
+  border: 1px solid #80DEEA;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+}
+
+.rightMetrics {
+  grid-column: span 12;
+}
+
+@media (min-width: 1024px) {
+  .rightMetrics {
+    grid-column: span 8;
+  }
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .metricsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Metric Card Styles */
+.metricCard {
+  border: 1px solid #333;
+  background-color: #121212;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pulseContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  opacity: 0.5;
+}
+
+.pulseDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #80DEEA;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.metricLabel {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.metricValue {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #F5F5F5;
+  font-family: monospace;
+  letter-spacing: -0.05em;
+}
+
+.metricUnit {
+  font-size: 1rem;
+  color: #80DEEA;
+  margin-left: 0.25rem;
+}
+
+.metricSubtext {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: #4B5563;
+}
+
+.chartContainer {
+  height: 12rem;
+  border: 1px solid #333;
+  background-color: #121212;
+  padding: 1rem;
+  position: relative;
+}
+
+.chartLabel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #6B7280;
+}

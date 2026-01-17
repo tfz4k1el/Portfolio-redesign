@@ -1,0 +1,21 @@
+/* Gruvbox Dark (Hard) */
+[data-theme="gruvbox"] {
+  --bg-primary: #282828;
+  --bg-secondary: #3c3836; /* Bg1 */
+  --text-primary: #ebdbb2; /* Fg0 */
+  --text-secondary: #a89984; /* Fg4 */
+  --accent: #fe8019; /* Orange */
+  --border-color: #504945; /* Bg2 */
+  --bg-grid: #665c54; /* Bg3 */
+}
+
+/* Gruvbox Light (Hard) */
+[data-theme="gruvbox-light"] {
+  --bg-primary: #fbf1c7;
+  --bg-secondary: #ebdbb2; /* Bg1 */
+  --text-primary: #3c3836; /* Fg0? Actually 282828 is hard dark, 3c3836 is regular dark fg? No, light fg is 3c3836 */
+  --text-secondary: #7c6f64; /* Fg4 */
+  --accent: #d65d0e; /* Orange */
+  --border-color: #d5c4a1; /* Bg2 */
+  --bg-grid: #bdae93; /* Bg3 */
+}

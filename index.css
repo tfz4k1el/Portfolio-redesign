@@ -1,0 +1,16 @@
+:root {
+  /* Default variables (Matches "Rose Pine Dark" or technical dark theme) */
+  --bg-primary: #0F0F0F;
+  --bg-secondary: #121212;
+  --bg-tertiary: #1A1A1A; /* Terminal headers etc */
+  --text-primary: #F5F5F5;
+  --text-secondary: #9CA3AF;
+  --accent: #80DEEA;
+  --border-color: #333333;
+  --bg-grid: #333333;
+  
+  /* Additional functional colors that might be needed */
+  --success: #80DEEA; /* Online status */
+  --highlight-text: #80DEEA;
+  --chart-gradient-start: 128, 222, 234; /* RGB for chart opacity */
+}
