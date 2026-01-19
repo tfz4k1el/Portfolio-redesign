@@ -22,10 +22,11 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className={styles.links}>
-            <FooterLink href="#" label="GH" />
-            <FooterLink href="#" label="LI" />
-            <FooterLink href="#" label="X" />
-            <FooterLink href="mailto:hello@hafiz.dev" label="MAIL" />
+            <FooterLink href="https://wa.me/918592882354" label="WA" />
+            <FooterLink href="https://instagram.com/z4rchx" label="IG" />
+            <FooterLink href="https://x.com/z4f3x" label="X" />
+            <FooterLink href="https://www.linkedin.com/in/hafiz-yoosuf-348035325/" label="LI" />
+            <FooterLink href="mailto:hafizyoosuf710@gmail.com" label="MAIL" />
         </div>
 
         <div className={styles.copyright}>

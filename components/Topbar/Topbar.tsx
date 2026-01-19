@@ -10,9 +10,10 @@ interface TopbarProps {
 
 const THEMES = [
   { id: 'catppuccin', color: '#cba6f7', label: 'Catppuccin' },
-  { id: 'rosepine', color: '#ebbcba', label: 'Rose Pine' },
+  { id: 'rosepine', color: '#eb6f92', label: 'Rose Pine' },
   { id: 'nord', color: '#88C0D0', label: 'Nord' },
   { id: 'gruvbox', color: '#fe8019', label: 'Gruvbox' },
+  { id: 'everforest', color: '#a7c080', label: 'Everforest' },
   { id: 'kanagawa', color: '#7E9CD8', label: 'Kanagawa' },
 ];
 

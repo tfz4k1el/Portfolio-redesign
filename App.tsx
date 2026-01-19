@@ -16,6 +16,7 @@ import './themes/nord.css';
 import './themes/catppuccin.css';
 import './themes/gruvbox.css';
 import './themes/kanagawa.css';
+import './themes/everforest.css';
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();
