@@ -15,6 +15,7 @@
     height: 22.25rem;
     grid-template-columns: 1fr 1.3fr;
     display: grid;
+    overflow: hidden;
   }
 }
   
@@ -130,6 +131,7 @@
   .visualContainer {
     height: 250px;
     order: 1;
+    overflow: hidden;
   }
 }
 
