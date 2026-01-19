@@ -59,8 +59,7 @@ export const TheLab: React.FC = () => {
         {/* Left Info */}
         <div className={styles.leftInfo}>
              <h2 className={styles.heading}>
-                <span className={styles.headingNumber}>03.</span>
-                <span>THE_LAB</span>
+                Lab
             </h2>
             <p className={styles.description}>
                 Optimization is not a step; it is the entire process. 

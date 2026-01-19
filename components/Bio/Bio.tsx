@@ -80,17 +80,15 @@ export const Bio: React.FC = () => {
 
         {/* Text Side */}
         <div className={styles.textSide}>
-            <h2 className={styles.heading}>
-                <span className={styles.headingNumber}>01.</span>
-                <span>CORE_DUMP</span>
-            </h2>
+            <h2 className={styles.heading}>About me</h2>
             <p className={styles.paragraph}>
-                I do not build websites; I engineer <Highlight>digital environments</Highlight>. 
-                My philosophy is rooted in <Highlight>Technical Brutalism</Highlight>—exposing the raw function of code while maintaining a sterile, clinically clean aesthetic.
+                I specialize in crafting <Highlight>interactive UIs</Highlight> and <Highlight>motion graphics</Highlight> that feel alive. My expertise lies in <Highlight>ReactJS</Highlight>, where I focus on building front-ends that are as performant as they are visual.
             </p>
             <p className={styles.paragraph}>
-                Leveraging the precision of <Highlight>Arch Linux</Highlight> and the component architecture of modern web frameworks, 
-                I deliver interfaces that feel less like documents and more like <Highlight>heads-up displays</Highlight>.
+                I have a compulsive need to optimize my digital space—which is why I run <Highlight>Arch Linux</Highlight> (by the way) and tinker with custom ROMs. That curiosity has cost me two bricked phones, but the <Highlight>control</Highlight> I gain over the system is worth the risk.
+            </p>
+            <p className={styles.paragraph}>
+                When I disconnect, you’ll find me near mountains and lakes, thinking about thinking.
             </p>
         </div>
       </div>

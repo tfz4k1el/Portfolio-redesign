@@ -30,7 +30,11 @@
   background-color: var(--bg-primary); /* Was #0F0F0F */
   min-height: 100vh;
   color: var(--text-primary); /* Was #F5F5F5 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  letter-spacing: var(--base-tracking);
   cursor: default;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

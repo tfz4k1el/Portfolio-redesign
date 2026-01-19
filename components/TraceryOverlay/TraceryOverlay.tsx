@@ -110,7 +110,7 @@ const TraceryOverlay: React.FC<TraceryOverlayProps> = ({ enabled = true }) => {
       ctx.lineWidth = 1;
       ctx.setLineDash([]); // Solid lines for camera focus
       ctx.fillStyle = overlayColor;
-      ctx.font = '500 10px monospace';
+      ctx.font = '500 10px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
 
       // Iterate ALL targets every frame
       allTargets.forEach(el => {

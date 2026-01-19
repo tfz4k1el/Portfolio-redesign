@@ -9,8 +9,7 @@ export const WorkStack: React.FC = () => {
     <Section id="work">
        <div className={styles.sectionHeader}>
             <h2 className={styles.heading}>
-                <span className={styles.headingNumber}>02.</span>
-                <span>PROJECT_INDEX</span>
+                Projects
             </h2>
             <span className={styles.totalRecords}>
                 Total Records: {PROJECTS.length}

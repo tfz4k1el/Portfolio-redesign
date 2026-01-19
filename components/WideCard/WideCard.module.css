@@ -118,7 +118,7 @@
   color: var(--text-secondary);
   line-height: 1.625;
   max-width: 65ch;
-  font-weight: 300;
+  font-weight: var(--weight-body);
 }
 
 .visualContainer {

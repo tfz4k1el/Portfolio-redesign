@@ -41,14 +41,14 @@
 
 .terminalMeta {
   margin-left: auto;
-  font-family: monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--text-secondary);
 }
 
 .terminalContent {
   padding: 1.5rem;
-  font-family: monospace;
+  font-family: var(--font-mono);
   font-size: 0.875rem;
   line-height: 2;
   color: var(--text-secondary);
@@ -88,12 +88,14 @@
 }
 
 .heading {
-  font-size: 2.25rem; /* text-4xl */
+  font-size: var(--text-2xl);
   font-weight: 700;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+  letter-spacing: var(--tracking-2xl);
+  line-height: var(--leading-2xl);
   color: var(--text-primary);
 }
 
@@ -104,8 +106,10 @@
 }
 
 .paragraph {
-  font-size: 1.25rem; /* text-xl */
-  line-height: 1.625;
+  font-size: var(--text-lg);
+  line-height: var(--leading-lg);
+  letter-spacing: var(--tracking-lg);
+  font-weight: var(--weight-body);
   color: var(--text-secondary);
   margin-bottom: 2rem;
 }
