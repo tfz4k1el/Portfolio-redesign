@@ -25,7 +25,7 @@
 }
 
 .heading {
-  font-size: 2.25rem; /* text-4xl */
+  font-size: var(--text-2xl);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@
 
 .metricsGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -88,6 +88,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
 }
 
 @media (min-width: 768px) {
@@ -128,14 +129,20 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .metricValue {
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 4.2vw, 2.25rem);
   font-weight: 700;
   color: var(--text-primary);
   font-family: monospace;
   letter-spacing: -0.05em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  min-width: 0;
 }
 
 .metricUnit {
@@ -169,4 +176,26 @@
   font-family: monospace;
   font-size: 0.75rem;
   color: var(--text-secondary);
+  max-width: calc(100% - 2rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .grid {
+    gap: 2rem;
+  }
+  .metricCard {
+    padding: 0.9rem;
+  }
+  .chartContainer {
+    height: 10.5rem;
+  }
+  .chartLabel {
+    top: 0.75rem;
+    left: 0.75rem;
+    max-width: calc(100% - 1.5rem);
+    font-size: 0.7rem;
+  }
 }

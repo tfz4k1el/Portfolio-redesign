@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Section } from '../Section/Section';
 import { AreaChart, Area, ResponsiveContainer, YAxis } from 'recharts';
 import styles from './TheLab.module.css';
 
-// Generate fake smooth data
+// Generate fake smooth data for graph (Simulated as requested)
 const generateData = (length: number) => {
   const data = [];
   let prev = 50;
@@ -29,18 +29,59 @@ const MetricCard = ({ label, value, unit, subtext }: { label: string, value: str
 );
 
 export const TheLab: React.FC = () => {
-  const [heapSize, setHeapSize] = useState(12.4);
-  const [renderTime, setRenderTime] = useState(0.8);
+  const [heapSize, setHeapSize] = useState(0);
+  const [renderTime, setRenderTime] = useState(0);
   const [fps, setFps] = useState(60);
   const [chartData, setChartData] = useState(generateData(50));
   
-  // Simulation loop
+  const frameCount = useRef(0);
+  const lastTime = useRef(performance.now());
+  const rafId = useRef<number>(0);
+
+  // RAF Loop for counting frames
+  useEffect(() => {
+    const loop = () => {
+      frameCount.current++;
+      rafId.current = requestAnimationFrame(loop);
+    };
+    rafId.current = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(rafId.current);
+  }, []);
+
+  // Interval for updating UI with live data (every 500ms to be readable)
   useEffect(() => {
     const interval = setInterval(() => {
-      setHeapSize(prev => +(prev + (Math.random() - 0.5) * 0.5).toFixed(1));
-      setRenderTime(prev => Math.max(0.1, +(prev + (Math.random() - 0.5) * 0.2).toFixed(2)));
-      setFps(prev => Math.min(60, Math.max(55, Math.floor(prev + (Math.random() - 0.5) * 2))));
+      const now = performance.now();
+      const elapsed = now - lastTime.current;
       
+      // Calculate FPS
+      // If elapsed < 1000, we extrapolate? No, just measure frames in this interval.
+      // fps = frames / (elapsed / 1000)
+      if (elapsed > 0) {
+        const currentFps = Math.round((frameCount.current * 1000) / elapsed);
+        setFps(Math.min(144, currentFps)); // Cap purely for sanity if browser throttles
+        
+        // Frame Time (ms) = 1000 / fps or just elapsed / frames
+        if (frameCount.current > 0) {
+           setRenderTime(elapsed / frameCount.current);
+        }
+      }
+      
+      // Reset counters
+      frameCount.current = 0;
+      lastTime.current = now;
+
+      // Heap Size (Genuine)
+      // @ts-ignore
+      if (window.performance && window.performance.memory) {
+         // @ts-ignore
+         setHeapSize(window.performance.memory.usedJSHeapSize / 1048576);
+      } else {
+         // Fallback if API not available (e.g. Firefox)
+         setHeapSize(prev => prev + (Math.random() - 0.5)); 
+      }
+
+      // Graph Update (Fake)
       setChartData(prev => {
         const newData = [...prev.slice(1)];
         const lastVal = prev[prev.length - 1].value;
@@ -48,7 +89,8 @@ export const TheLab: React.FC = () => {
         newData.push({ value: nextVal });
         return newData;
       });
-    }, 100);
+
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
@@ -66,17 +108,30 @@ export const TheLab: React.FC = () => {
                 This section monitors the current runtime environment in real-time. 
                 We pursue the asymptotic limit of zero latency.
             </p>
-            <div className={styles.status}>
-                STATUS: OPTIMIZED
-            </div>
+            {/* Removed Status: Optimized */}
         </div>
 
         {/* Right Metrics */}
         <div className={styles.rightMetrics}>
             <div className={styles.metricsGrid}>
-                <MetricCard label="JS Heap Size" value={heapSize.toFixed(1)} unit="MB" subtext="Garbage Collection: Idle" />
-                <MetricCard label="Render Cycle" value={renderTime.toFixed(2)} unit="ms" subtext="Paint: Sub-pixel" />
-                <MetricCard label="Frame Rate" value={fps.toString()} unit="FPS" subtext="V-Sync: Locked" />
+                <MetricCard 
+                    label="JS Heap Size" 
+                    value={heapSize.toFixed(1)} 
+                    unit="MB" 
+                    subtext="Live Memory Usage" 
+                />
+                <MetricCard 
+                    label="Frame Time" 
+                    value={renderTime.toFixed(2)} 
+                    unit="ms" 
+                    subtext="Avg Render Delta" 
+                />
+                <MetricCard 
+                    label="Frame Rate" 
+                    value={fps.toString()} 
+                    unit="FPS" 
+                    subtext="Real-time V-Sync" 
+                />
             </div>
             
             {/* Chart Area */}

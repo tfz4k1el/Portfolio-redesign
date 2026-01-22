@@ -70,7 +70,7 @@ const WideCard: React.FC<WideCardProps> = ({
                         <div key={colIndex} className={styles.scrollColumn}>
                              <div className={`${styles.slideTrack} ${isEven ? styles.columnEven : styles.columnOdd}`}>
                                 {images.map((src, imgIndex) => (
-                                    <img key={imgIndex} src={src} className={styles.scrollImage} alt="" />
+                                    <img key={imgIndex} src={src} className={styles.scrollImage} alt="" loading="lazy" />
                                 ))}
                             </div>
                         </div>
@@ -83,12 +83,14 @@ const WideCard: React.FC<WideCardProps> = ({
                     src={desktopImg}
                     alt="Desktop Preview"
                     className={styles.desktopImage}
+                    loading="lazy"
                 />
                 
                 <img
                     src={mobileImg}
                     alt="Mobile Preview"
                     className={styles.mobileImage}
+                    loading="lazy"
                 />
             </>
         )}

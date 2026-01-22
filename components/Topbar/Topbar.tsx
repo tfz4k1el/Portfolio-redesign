@@ -11,8 +11,7 @@ interface TopbarProps {
 const THEMES = [
   { id: 'catppuccin', color: '#cba6f7', label: 'Catppuccin' },
   { id: 'rosepine', color: '#eb6f92', label: 'Rose Pine' },
-  { id: 'nord', color: '#88C0D0', label: 'Nord' },
-  { id: 'gruvbox', color: '#fe8019', label: 'Gruvbox' },
+  { id: 'apple', color: '#007aff', label: 'Apple System' },
   { id: 'everforest', color: '#a7c080', label: 'Everforest' },
   { id: 'kanagawa', color: '#7E9CD8', label: 'Kanagawa' },
 ];
@@ -20,11 +19,8 @@ const THEMES = [
 export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme, palette, onPaletteChange }) => {
   return (
     <nav className={styles.topbar}>
-      <a href="mailto:hello@hafiz.dev" className={styles.contactBtn}>
-        CONTACT
-      </a>
-      
-      <div className={styles.controls}>
+      <div className={styles.inner}>
+        <div className={styles.controls}>
           <div className={styles.themeList}>
             {THEMES.map((t) => (
               <button
@@ -39,7 +35,7 @@ export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme, palette, onP
             ))}
           </div>
 
-          <button onClick={toggleTheme} className={styles.themeBtn} aria-label="Toggle Light/Dark Mode">
+          <button onClick={toggleTheme} className={styles.themeBtn} aria-label="Toggle Light/Dark Mode" style={{ mixBlendMode: 'difference' }}>
             {theme === 'light' ? (
               /* Sun Icon */
               <svg className={styles.icon} viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
@@ -60,6 +56,7 @@ export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme, palette, onP
               </svg>
             )}
           </button>
+        </div>
       </div>
     </nav>
   );

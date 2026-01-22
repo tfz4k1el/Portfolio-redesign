@@ -7,6 +7,8 @@ export interface Project {
   desktopImg?: string;
   mobileImg?: string;
   mobileImages?: (string | string[])[];
+  videoUrl?: string;
+  tweetId?: string;
   stats: {
     label: string;
     value: string;

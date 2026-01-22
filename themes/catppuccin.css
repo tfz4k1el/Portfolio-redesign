@@ -1,23 +1,37 @@
 /* Catppuccin Mocha (Dark) */
 [data-theme="catppuccin"] {
-  --bg-primary: #1e1e2e;
-  --bg-secondary: #313244; /* Surface0 */
-  --text-primary: #cdd6f4; /* Text */
+  /* UI Colors */
+  --bg-primary: #1e1e2e;     /* Base */
+  --bg-secondary: #313244;   /* Surface0 (Your selection) */
+  --text-primary: #cdd6f4;   /* Text */
   --text-secondary: #a6adc8; /* Subtext0 */
-  --accent: #cba6f7; /* Mauve */
-  --border-color: #45475a; /* Surface1 */
-  --bg-grid: #585b70; /* Surface2 */
-  --overlay-color: #FFFFFF;
+  --accent: #cba6f7;         /* Mauve */
+  --border-color: #45475a;   /* Surface1 */
+  --bg-grid: #585b70;        /* Surface2 */
+  --overlay-color: #6c7086;  /* Overlay0 (Fixed: was #FFFFFF) */
+
+  /* Syntax Colors (Standard Mocha) */
+  --syntax-keyword: #cba6f7; /* Mauve */
+  --syntax-type: #f9e2af;    /* Yellow */
+  --syntax-prop: #b4befe;    /* Lavender */
+  --syntax-string: #a6e3a1;  /* Green */
 }
 
 /* Catppuccin Latte (Light) */
 [data-theme="catppuccin-light"] {
-  --bg-primary: #eff1f5;
-  --bg-secondary: #e6e9ef; /* Surface0? Actually Base is eff1f5, Mantle e6e9ef */
-  --text-primary: #4c4f69;
-  --text-secondary: #6c6f85;
-  --accent: #8839ef; /* Mauve */
-  --border-color: #ccd0da;
-  --bg-grid: #bcc0cc;
-  --overlay-color: #000000;
+  /* UI Colors */
+  --bg-primary: #eff1f5;     /* Base */
+  --bg-secondary: #e6e9ef;   /* Mantle (Your selection) */
+  --text-primary: #4c4f69;   /* Text */
+  --text-secondary: #6c6f85; /* Subtext0 */
+  --accent: #8839ef;         /* Mauve */
+  --border-color: #ccd0da;   /* Surface0 */
+  --bg-grid: #bcc0cc;        /* Surface1 */
+  --overlay-color: #9ca0b0;  /* Overlay0 (Fixed: was #000000) */
+
+  /* Syntax Colors (Standard Latte) */
+  --syntax-keyword: #8839ef; /* Mauve */
+  --syntax-type: #df8e1d;    /* Yellow */
+  --syntax-prop: #7287fd;    /* Lavender */
+  --syntax-string: #40a02b;  /* Green */
 }

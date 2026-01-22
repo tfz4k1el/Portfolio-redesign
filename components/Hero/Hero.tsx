@@ -69,14 +69,12 @@ export const Hero: React.FC<HeroProps> = ({ traceryEnabled, toggleTracery }) => 
               transition={{ delay: 0.4, duration: 0.8 }}
               className={styles.statusBox}
             >
-              <p className={styles.statusLine}>
-                SYSTEM_STATUS: <span className={styles.statusOnline}>ONLINE</span>
-              </p>
-              <p className={styles.description}>
-                High-performance systems.<br />
-                Kinetic interaction.<br />
-                0% Bloat.
-              </p>
+              <div className={styles.description}>
+                <div>Frontend Architecture</div>
+                <div>Interaction Design</div>
+                <div>Motion Graphics</div>
+                <div>Product Strategy</div>
+              </div>
             </motion.div>
           </div>
         </motion.div>

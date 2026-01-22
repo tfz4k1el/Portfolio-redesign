@@ -12,11 +12,10 @@ import styles from './App.module.css';
 // Import Themes (so variables are available)
 
 import './themes/rosepine.css';
-import './themes/nord.css';
 import './themes/catppuccin.css';
-import './themes/gruvbox.css';
 import './themes/kanagawa.css';
 import './themes/everforest.css';
+import './themes/apple.css';
 
 const App: React.FC = () => {
   const { scrollYProgress } = useScroll();

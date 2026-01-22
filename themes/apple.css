@@ -1,0 +1,37 @@
+/* Apple System (Dark) - Xcode Default Dark */
+[data-theme="apple"] {
+  /* UI Colors */
+  --bg-primary: #000000;
+  --bg-secondary: #1c1c1e;   /* System Gray 6 (Dark) */
+  --text-primary: #ffffff;
+  --text-secondary: #8e8e93; /* System Gray (Dark) */
+  --accent: #0a84ff;         /* System Blue (Dark) */
+  --border-color: #38383a;   /* Separator (Dark) */
+  --bg-grid: #2c2c2e;        /* System Gray 5 (Dark) */
+  --overlay-color: #2c2c2e;  /* System Gray 5 (Dark) */
+
+  /* Syntax Colors: Xcode Default Dark */
+  --syntax-keyword: #ff375f; /* Pink (Keywords) */
+  --syntax-type: #bf5af2;    /* Purple (Types/Classes) */
+  --syntax-prop: #64d2ff;    /* Teal (Properties/Vars) */
+  --syntax-string: #ff453a;  /* Red (Strings) */
+}
+
+/* Apple System (Light) - Xcode Default Light */
+[data-theme="apple-light"] {
+  /* UI Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f2f2f7;   /* System Gray 6 (Light) */
+  --text-primary: #000000;
+  --text-secondary: #8e8e93; /* System Gray (Light) */
+  --accent: #007aff;         /* System Blue (Light) */
+  --border-color: #c6c6c8;   /* Separator (Light) */
+  --bg-grid: #e5e5ea;        /* System Gray 5 (Light) */
+  --overlay-color: #ffffff;  /* Standard Overlay */
+
+  /* Syntax Colors: Xcode Default Light */
+  --syntax-keyword: #9b2393; /* Violet (Keywords) */
+  --syntax-type: #326d74;    /* Dark Teal (Types/Classes) */
+  --syntax-prop: #0f68a0;    /* Dark Blue (Properties/Vars) */
+  --syntax-string: #c41a16;  /* Deep Red (Strings) */
+}

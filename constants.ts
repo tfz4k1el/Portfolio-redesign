@@ -50,4 +50,17 @@ export const PROJECTS: Project[] = [
       { label: 'Retention', value: '85%' },
     ],
   },
+  {
+    id: '004',
+    title: 'T2Chat',
+    description: 'Collaborated with the T2Chat team to design and animate a high-energy motion graphic promo. The video highlights the app\'s real-time capabilities and sleek interface (replacing tRPC complexities), bridging technical features with engaging visual storytelling using After Effects.',
+    tech: ['Motion Graphics', 'Promo', 'Visuals'],
+    role: 'Motion Designer',
+    videoUrl: '/videos/T2Chat.mp4',
+    // tweetId: '1935401498126758254', 
+    stats: [
+      { label: 'Views', value: 'High' },
+      { label: 'Impact', value: 'High' },
+    ],
+  },
 ];
