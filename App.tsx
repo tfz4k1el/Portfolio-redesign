@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
   // Theme State: 'light' or 'default' (dark)
   const [mode, setMode] = useState('default');
-  const [palette, setPalette] = useState('catppuccin');
+  const [palette, setPalette] = useState('apple');
 
   useEffect(() => {
     // Construct theme string: e.g. "rosepine" or "rosepine-light"
