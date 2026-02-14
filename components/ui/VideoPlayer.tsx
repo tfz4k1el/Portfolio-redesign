@@ -91,7 +91,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, poster, autoPlay 
         </div>
 
         {/* Bottom Bar */}
-        <div className="relative z-10 flex items-center gap-4 bg-black/20 backdrop-blur-md p-3 rounded-xl border border-white/10 w-full mb-1">
+        <div className="relative z-10 flex items-center gap-4 bg-black/20 backdrop-blur-md p-3 rounded-xl w-full mb-1">
             <button onClick={togglePlay} className="text-white hover:text-gray-200">
                 {isPlaying ? (
                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>

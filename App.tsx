@@ -11,10 +11,6 @@ import styles from './App.module.css';
 
 // Import Themes (so variables are available)
 
-import './themes/rosepine.css';
-import './themes/catppuccin.css';
-import './themes/kanagawa.css';
-import './themes/everforest.css';
 import './themes/apple.css';
 
 const App: React.FC = () => {
@@ -27,13 +23,13 @@ const App: React.FC = () => {
 
   // Theme State: 'light' or 'default' (dark)
   const [mode, setMode] = useState('default');
-  const [palette, setPalette] = useState('apple');
+  const palette = 'apple';
 
   useEffect(() => {
-    // Construct theme string: e.g. "rosepine" or "rosepine-light"
+    // Construct theme string: e.g. "apple" or "apple-light"
     const themeString = mode === 'light' ? `${palette}-light` : palette;
     document.documentElement.setAttribute('data-theme', themeString);
-  }, [mode, palette]);
+  }, [mode]);
 
   const toggleTheme = () => {
     setMode(prev => prev === 'default' ? 'light' : 'default');
@@ -47,8 +43,6 @@ const App: React.FC = () => {
       <Topbar 
         theme={mode} 
         toggleTheme={toggleTheme} 
-        palette={palette}
-        onPaletteChange={setPalette}
       />
       
       {/* Top Progress Bar */}

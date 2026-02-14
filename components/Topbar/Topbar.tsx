@@ -4,36 +4,13 @@ import styles from './Topbar.module.css';
 interface TopbarProps {
   theme: string; // 'dark' or 'light'
   toggleTheme: () => void;
-  palette: string;
-  onPaletteChange: (newPalette: string) => void;
 }
 
-const THEMES = [
-  { id: 'catppuccin', color: '#cba6f7', label: 'Catppuccin' },
-  { id: 'rosepine', color: '#eb6f92', label: 'Rose Pine' },
-  { id: 'apple', color: '#007aff', label: 'Apple System' },
-  { id: 'everforest', color: '#a7c080', label: 'Everforest' },
-  { id: 'kanagawa', color: '#7E9CD8', label: 'Kanagawa' },
-];
-
-export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme, palette, onPaletteChange }) => {
+export const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme }) => {
   return (
     <nav className={styles.topbar}>
       <div className={styles.inner}>
         <div className={styles.controls}>
-          <div className={styles.themeList}>
-            {THEMES.map((t) => (
-              <button
-                key={t.id}
-                className={styles.themeIconBtn}
-                style={{ backgroundColor: t.color }}
-                title={t.label}
-                onClick={() => onPaletteChange(t.id)}
-                data-active={palette === t.id}
-                aria-label={`Select ${t.label} Theme`}
-              />
-            ))}
-          </div>
 
           <button onClick={toggleTheme} className={styles.themeBtn} aria-label="Toggle Light/Dark Mode" style={{ mixBlendMode: 'difference' }}>
             {theme === 'light' ? (

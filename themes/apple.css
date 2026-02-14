@@ -5,8 +5,8 @@
   --bg-secondary: #1c1c1e;   /* System Gray 6 (Dark) */
   --text-primary: #ffffff;
   --text-secondary: #8e8e93; /* System Gray (Dark) */
-  --accent: #0a84ff;         /* System Blue (Dark) */
-  --border-color: #38383a;   /* Separator (Dark) */
+  --accent: #eb6f92;         /* System Blue (Dark) */
+  --border-color: transparent;   /* Separator (Dark) */
   --bg-grid: #2c2c2e;        /* System Gray 5 (Dark) */
   --overlay-color: #2c2c2e;  /* System Gray 5 (Dark) */
 
@@ -24,8 +24,8 @@
   --bg-secondary: #f2f2f7;   /* System Gray 6 (Light) */
   --text-primary: #000000;
   --text-secondary: #8e8e93; /* System Gray (Light) */
-  --accent: #007aff;         /* System Blue (Light) */
-  --border-color: #c6c6c8;   /* Separator (Light) */
+  --accent: #b4637a;         /* System Blue (Light) */
+  --border-color: transparent;   /* Separator (Light) */
   --bg-grid: #e5e5ea;        /* System Gray 5 (Light) */
   --overlay-color: #ffffff;  /* Standard Overlay */
 

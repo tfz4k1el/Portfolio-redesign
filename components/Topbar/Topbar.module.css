@@ -7,16 +7,12 @@
 
   /* Subtle “Apple” glass surface */
   background: color-mix(in srgb, var(--bg-primary) 72%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--border-color) 75%, transparent);
+
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
 }
 
-@media (min-width: 768px) {
-  .topbar {
-    /* inner handles horizontal padding */
-  }
-}
+
 
 .inner {
   width: 100%;
@@ -89,7 +85,7 @@
 }
 
 .themeIconBtn[data-active="true"] {
-  border-color: var(--text-primary);
+
   transform: scale(1.1);
 }
 

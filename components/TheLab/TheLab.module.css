@@ -1,6 +1,4 @@
-.section {
-  border-top: 1px solid var(--border-color);
-}
+
 
 .grid {
   display: grid;
@@ -50,7 +48,7 @@
   font-family: monospace;
   font-size: 0.75rem; /* text-xs */
   color: var(--accent);
-  border: 1px solid var(--accent);
+
   display: inline-block;
   padding: 0.25rem 0.75rem;
 }
@@ -80,7 +78,7 @@
 
 /* Metric Card Styles */
 .metricCard {
-  border: 1px solid var(--border-color);
+
   background-color: var(--bg-secondary);
   padding: 1rem;
   position: relative;
@@ -161,7 +159,7 @@
 
 .chartContainer {
   height: 12rem;
-  border: 1px solid var(--border-color);
+
   background-color: var(--bg-secondary);
   padding: 0.5rem;
   position: relative;

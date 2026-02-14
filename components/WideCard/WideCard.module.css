@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   background-color: var(--bg-primary);
-  border: 1px solid var(--border-color);
+
   gap: 2rem;
   padding: 2rem;
   overflow: hidden;
@@ -23,33 +23,9 @@
   border-color: var(--accent);
 } Removed simple border hover */
 
-.card::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  z-index: 20;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  
-  background: 
-    /* Top Left */
-    linear-gradient(var(--accent), var(--accent)) 0 0 / 20px 1px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 0 0 / 1px 20px no-repeat,
-    /* Top Right */
-    linear-gradient(var(--accent), var(--accent)) 100% 0 / 20px 1px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 100% 0 / 1px 20px no-repeat,
-    /* Bottom Right */
-    linear-gradient(var(--accent), var(--accent)) 100% 100% / 20px 1px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 100% 100% / 1px 20px no-repeat,
-    /* Bottom Left */
-    linear-gradient(var(--accent), var(--accent)) 0 100% / 20px 1px no-repeat,
-    linear-gradient(var(--accent), var(--accent)) 0 100% / 1px 20px no-repeat;
-}
 
-.card:hover::after {
-  opacity: 1;
-}
+
+
 
 .backgroundGrid {
   position: absolute;
@@ -110,7 +86,7 @@
   font-size: 0.75rem;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
-  border-left: 2px solid var(--accent);
+
   padding-left: 0.75rem;
 }
 
@@ -147,7 +123,7 @@
   width: 70%;
   top: 100%;
   transform: translateY(-100%);
-  border: 1px solid var(--border-color);
+
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   transition-property: top, transform;
   transition-duration: var(--desktop-duration, 2s);
@@ -164,7 +140,7 @@
   width: 28%;
   top: 0;
   transform: translateY(0);
-  border: 1px solid var(--border-color);
+
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   transition-property: top, transform;
@@ -221,5 +197,5 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: 1px solid var(--border-color);
+
 }
