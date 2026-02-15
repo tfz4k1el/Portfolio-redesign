@@ -76,21 +76,21 @@ export const Hero: React.FC<HeroProps> = ({ traceryEnabled, toggleTracery }) => 
                 <div>Product Strategy</div>
               </div>
             </motion.div>
-          </div>
-        </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className={styles.scrollIndicator}
-        >
-          <button 
-            onClick={toggleTracery}
-            className={styles.traceryToggle}
-          >
-            TRACERY: [{traceryEnabled ? 'ON' : 'OFF'}]
-          </button>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+              className={styles.scrollIndicator}
+            >
+              <button 
+                onClick={toggleTracery}
+                className={styles.traceryToggle}
+              >
+                TRACERY: [{traceryEnabled ? 'ON' : 'OFF'}]
+              </button>
+            </motion.div>
+          </div>
         </motion.div>
       </Section>
     </div>

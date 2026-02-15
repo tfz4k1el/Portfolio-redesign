@@ -24,42 +24,52 @@
   pointer-events: none;
 }
 
+
+/* Cleaned up layout with better flow */
+
 .contentGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
   .contentGrid {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    align-items: center; /* Center cleanly on Y axis */
   }
 }
 
 .titleColumn {
-  grid-column: span 12;
+  /* On mobile, standard block flow */
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
   .titleColumn {
     grid-column: span 8;
+    margin-bottom: 0;
   }
 }
 
 .title {
-  font-size: clamp(4rem, 15vw, 6rem); /* more dynamic mobile size */
+  font-size: clamp(3.5rem, 12vw, 6rem); /* Tuned for better multiline balance */
   font-weight: var(--weight-display);
   letter-spacing: var(--tracking-display);
   line-height: 0.9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
-  margin-left: -0.05em; /* Optical alignment */
+  margin-left: -0.05em;
 }
 
 @media (min-width: 768px) {
   .title {
     font-size: 8rem; 
     line-height: 1;
+    margin-bottom: 0;
   }
 }
 
@@ -68,7 +78,7 @@
   color: var(--accent);
   font-size: 1.25rem;
   font-family: monospace;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   letter-spacing: -0.05em;
   font-weight: 400;
 }
@@ -76,45 +86,29 @@
 @media (min-width: 768px) {
   .subtitle {
     font-size: 2.25rem;
-    margin-top: 0.5rem;
     letter-spacing: normal;
   }
 }
 
 .statusColumn {
-  grid-column: span 12;
+  /* Mobile: Flow content below title */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  /* padding-bottom removed for better alignment keying off content */
+  gap: 3rem; /* Space between description and tracery button */
 }
 
 @media (min-width: 768px) {
   .statusColumn {
     grid-column: span 4;
+    height: 100%;
+    justify-content: flex-end; /* Align bottom right */
     padding-bottom: 1rem;
+    gap: 0;
   }
 }
 
 .statusBox {
-  padding-left: 0; /* Align flush since border is gone */
-}
-
-.statusLine {
-  font-family: monospace;
-  font-size: 0.875rem; /* text-sm */
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-@media (min-width: 768px) {
-  .statusLine {
-    font-size: 1rem;
-  }
-}
-
-.statusOnline {
-  color: var(--accent);
+  padding-left: 0;
 }
 
 .description {
@@ -125,17 +119,28 @@
 
 @media (min-width: 768px) {
   .description {
-    font-size: 125%; /* relative to base */
+    font-size: 1.25rem;
   }
 }
 
+/* 
+   Tracery/Scroll Indicator
+   - Mobile: Part of the flow in statusColumn to guarantee spacing.
+   - Desktop: Absolute positioning is fine as there is ample space, or stick to grid.
+*/
 .scrollIndicator {
-  position: absolute;
-  bottom: 3rem;
-  left: 1.5rem;
+  position: relative; /* Default to relative flow */
   font-family: monospace;
   font-size: 0.75rem;
   color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+  .scrollIndicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+  }
 }
 
 .traceryToggle {
@@ -152,10 +157,4 @@
 
 .traceryToggle:hover {
   color: var(--accent);
-}
-
-@media (min-width: 768px) {
-  .scrollIndicator {
-    left: 3rem;
-  }
 }
