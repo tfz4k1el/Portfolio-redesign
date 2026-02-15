@@ -19,9 +19,9 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 34rem; /* Approx height of previous terminal (14 lines * 2lh + padding) */
+  height: 34rem;  
   overflow: hidden;
-  border-radius: 0.5rem; /* Optional: adds a bit of polish */
+  border-radius: 0.5rem; 
 }
 
 .profileImage {
