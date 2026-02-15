@@ -1,13 +1,14 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 
 @media (min-width: 1024px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
   }
 }
 
@@ -15,7 +16,31 @@
   color: var(--accent);
 }
 
-.terminal {
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 34rem; /* Approx height of previous terminal (14 lines * 2lh + padding) */
+  overflow: hidden;
+  border-radius: 0.5rem; /* Optional: adds a bit of polish */
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profileImageHidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .terminal {
   background-color: var(--bg-secondary);
 
   padding: 0.25rem;
@@ -78,7 +103,7 @@
   width: 0.625rem;
   height: 1.25rem;
   background-color: var(--accent);
-}
+} */
 
 .textSide {
   display: flex;

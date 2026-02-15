@@ -5,8 +5,8 @@
   margin-right: auto;
   padding-left: 1.5rem; /* px-6 */
   padding-right: 1.5rem;
-  padding-top: 6rem; /* py-24 */
-  padding-bottom: 6rem;
+  padding-top: 3rem; /* py-12 */
+  padding-bottom: 3rem;
   position: relative;
 }
 
@@ -14,5 +14,7 @@
   .section {
     padding-left: 3rem; /* md:px-12 */
     padding-right: 3rem;
+    padding-top: 6rem; /* py-24 */
+    padding-bottom: 6rem;
   }
 }

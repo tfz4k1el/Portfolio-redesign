@@ -8,7 +8,7 @@
   --accent: #eb6f92;         /* System Blue (Dark) */
   --border-color: transparent;   /* Separator (Dark) */
   --bg-grid: #2c2c2e;        /* System Gray 5 (Dark) */
-  --overlay-color: #2c2c2e;  /* System Gray 5 (Dark) */
+  --overlay-color: #eedfe9;  /* System Gray 5 (Dark) */
 
   /* Syntax Colors: Xcode Default Dark */
   --syntax-keyword: #ff375f; /* Pink (Keywords) */
@@ -27,7 +27,7 @@
   --accent: #b4637a;         /* System Blue (Light) */
   --border-color: transparent;   /* Separator (Light) */
   --bg-grid: #e5e5ea;        /* System Gray 5 (Light) */
-  --overlay-color: #ffffff;  /* Standard Overlay */
+  --overlay-color: #362c33;  /* Standard Overlay */
 
   /* Syntax Colors: Xcode Default Light */
   --syntax-keyword: #9b2393; /* Violet (Keywords) */

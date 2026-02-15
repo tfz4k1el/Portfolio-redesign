@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   background-color: var(--bg-primary);
-
   gap: 2rem;
   padding: 2rem;
   overflow: hidden;
@@ -90,6 +89,8 @@
 
 @media (max-width: 1023px) {
   .visualContainer {
+    
+    margin-top: 2rem;
     height: 250px;
     order: 1;
   }

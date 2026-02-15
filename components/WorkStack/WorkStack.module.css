@@ -1,5 +1,5 @@
 .sectionHeader {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   padding-bottom: 2rem;
   display: flex;
@@ -33,10 +33,16 @@
   .totalRecords {
     display: block;
   }
+  .sectionHeader {
+    margin-bottom: 4rem;
+  }
+  .stack {
+    gap: 3rem;
+  }
 }
 
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
